@@ -1,0 +1,84 @@
+links{
+    color: #A8763E}
+header, footer, column1of2, column2of2, nav 
+    {display: block;}
+body {
+    color: #14470D;
+    background-color: #F7F3E3;
+    background-position: center;
+    font-family: Arial;
+    line-height: 1.4em;
+    margin: auto;}
+header {
+    height: 50%;
+    background-image: url("/salmon/images/river_rafting");}
+h1, h2, h3 {
+    font-weight: normal;}
+h1 {
+    margin: 10px 0px 20px 0px;
+    padding: 0px;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 60px;
+    color: #14470D;
+    line-height:52px;}
+h2 {
+    margin: 10px 0px 20px 0px;
+    padding: 0px;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 48px;
+    color: #14470D;
+    line-height:40px;}
+h3 { 
+    margin: 0px 0px 10px 0px;
+    color: #D65EA0;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 36px;
+    color: #14470D;
+    line-height:30px;}
+nav, footer {
+    clear: both;
+    color: #14470d;
+    background-color: #F7F3E3;
+    height: 30px;}
+.column1of2 {
+    width: 200px;
+    float: left;
+    margin: auto;
+    font-family: Heiti SC;
+    font-size: 12px;
+    line-height: 1em;
+    padding: 10px;
+}
+.column2of2 {
+    width: 700px;
+    float: left;
+    margin: auto;
+    padding: 10px;
+    font-family: Heiti SC;
+    font-size: 14px;
+    line-height: 1em;
+}
+img.align-right{
+    float: right;
+    margin-left: 10px;}
+img.align-center{
+   display: block;
+   margin: 0px auto;}
+img.align-left {
+    float: left;
+    margin-right: 10px;}
+img.small {
+    width: 100px;
+    height: 100px;}
+img.medium {
+    width: 300px;
+    height: 146px;}
+img.large {
+    width: 500px;
+    height: 500px;}
+
+
+
+
+
+
