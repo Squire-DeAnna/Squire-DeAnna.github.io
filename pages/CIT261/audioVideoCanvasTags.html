@@ -23,26 +23,91 @@ iniHal-scale=1.0, maximum-scale=1.0">
    <div class="column2of2">
           <p> 
           <h2>Examples of Video, Audio and Canvas Tags</h2>
+          <h3>Video Tag</h3><br>
           Here is an example of a video tag:<br>
+          <br>
           <br>&lt;video width="320" height="240" controls&gt;<br>
-            &lt;source src="/video/fasting.mp4" type="video/mp4"&gt;<br>
-            The browser you are using doesn't support this tag.<br>
+            &lt;source src="fasting.mp4" type="video/mp4"&gt;<br>
+            Your browser doesn't work. Try switching to Chrome.<br>
             &lt;/video&gt;<br>
           <video width="320" height="240" controls>
-            <source src="/video/fasting.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video>
+            <source src="fasting.mp4" type="video/mp4">
+            Your browser doesn't work. Try switching to Chrome.
+            </video><br>
+            <br>
+            <h3>Audio Tag</h3><br>
+            Here is an example of an audio tag:<br>
+            <br>
+            &lt;audio controls&gt;<br>
+            &lt;source  src="claraTardis.mp3" type="audio/mp3"&gt;<br>
+            Your browser doesn't work. Try switching to Chrome.<br>
+            &lt;audio&gt;<br>
+            <audio controls>
+            <source  src="claraTardis.mp3" type="audio/mp3">
+            Your browser doesn't work. Try switching to Chrome.<br>
+            </audio>
+            <br>
+            <h3>Canvas Tag</h3><br>
+            Here is an example of a Canvas using Javascript:<br>
+            <br>
+            &lt;canvas id="canvas" width="300" height="300" style="border:2px solid #fff000;" &gt;<br>
+            Your browser doesn't work. Try using Chrome&lt;/canvas&gt;<br>
+           	&lt;script&gt;<br>
+            var l = document.getElementById("canvas");<br>
+           <i>// draw line 1</i><br>
+			var line1 = l.getContext("2d");<br>
+			line1.moveTo(300,0);<br>
+			line1.lineTo(0,300);<br>
+			line1.stroke();<br>
+			<i>// draw line 2</i><br>
+			var line2 = l.getContext("2d");<br>
+			line2.moveTo(0,0);<br>
+			line2.lineTo(300,300);<br>
+			line2.stroke();<br>
+			<i>// draw line 3</i><br>
+			var line3 = l.getContext("2d");<br>
+			line3.moveTo(0,150);<br>
+			line3.lineTo(300,150);<br>
+			line3.stroke();<br>
+			<i>// draw line 4</i><br>
+			var line4 = l.getContext("2d");<br>
+			line4.moveTo(150,0);<br>
+			line4.lineTo(150,300);<br>
+			line4.stroke();<br>
+			&lt;/script&gt;<br>
+			<br>
+            <canvas id="canvas" width="300" height="300" style="border:2px solid #fff000;" >Your browser doesn't work. Try using Chrome</canvas>
+           <script>
+            var l = document.getElementById("canvas");
+            // draw line 1 
+			var line1 = l.getContext("2d");
+			line1.moveTo(300,0);
+			line1.lineTo(0,300);
+			line1.stroke();
+			// draw line 2
+			var line2 = l.getContext("2d");
+			line2.moveTo(0,0);
+			line2.lineTo(300,300);
+			line2.stroke();
+			// draw line 3
+			var line3 = l.getContext("2d");
+			line3.moveTo(0,150);
+			line3.lineTo(300,150);
+			line3.stroke();
+			// draw line 4
+			var line4 = l.getContext("2d");
+			line4.moveTo(150,0);
+			line4.lineTo(150,300);
+			line4.stroke();
+</script>
+            
           
 
         </div>
         
         <footer role="contentinfo">
-            <a href="http://www.foneflava.com">| Home |</a>
-            <a href="aboutus.html">| About Us |</a>
-            <a href="contactus.html">| Contact Us |</a>
-            <a href="siteplan.html">| Site Plan |</a>
-            <a href="exercises.php">| Exercises |</a>
-            <a href="teachingpresentation/tp1.html">| Teaching Presentation |</a>
+            <a href="/index.html">| Home |</a>
+            <a href="homepage.html">| CIT 261 Examples |</a>
         </footer>
     </body>
 </html>

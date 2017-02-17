@@ -33,19 +33,32 @@ iniHal-scale=1.0, maximum-scale=1.0">
       <p id="demo"></p>
       
 		  <br>
-		  <p> Here is an example of an "ontap"
+		  <p> TESTING Touch events
+
+<script>
+box2.addEventListener('touchstart', function(e){
+        touchobj = e.changedTouches[0] // reference first touch point
+        boxleft = parseInt(box2.style.left) // get left position of box
+        startx = parseInt(touchobj.clientX) // get x coord of touch point
+        e.preventDefault() // prevent default click behavior
+    }, false)
+    </script>
+
+
+
+
+
+
+		  
 
 </script>
 
         </div>
         
-        <footer role="contentinfo">
-            <a href="http://www.foneflava.com">| Home |</a>
-            <a href="aboutus.html">| About Us |</a>
-            <a href="contactus.html">| Contact Us |</a>
-            <a href="siteplan.html">| Site Plan |</a>
-            <a href="exercises.php">| Exercises |</a>
-            <a href="teachingpresentation/tp1.html">| Teaching Presentation |</a>
+    	<footer role="contentinfo">
+            <a href="/index.html">| Home |</a>
+            <a href="homepage.html">| CIT 261 Examples |</a>
+            
         </footer>
     </body>
 </html>
