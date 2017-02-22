@@ -25,7 +25,34 @@ iniHal-scale=1.0, maximum-scale=1.0">
             
         </div>
    <div class="column2of2">
- 	<h2>This page has not been completed</h2>
+ 	<h2>JSON Parse and Stringify</h2>
+ 	<script>
+ 	function stringify(){
+ 		var me = {
+ 		"fruit":"Apples",
+ 		"type":"Gala",
+ 		"quantity":"10 bushels",
+ 		};
+ 		
+ 		var string = JSON.stringify(me);
+ 		var object = JSON.parse(string);
+ 		
+ 		document.getElementById('stringifyOutput').innerHTML = string;
+ 		document.getElementById('parseOutput').innerHTML = "I have " + object.quantity + " of " + object.type + " " + object.fruit;
+ 	}
+ 	
+ 	</script>
+ 	
+ 	
+ 	<button onclick="stringify()">Stringify & Parse Example</button>
+ 	<div id="stringifyOutput"></div>
+ 	<br>
+ 	<div id="parseOutput"></div>
+ 	<br>
+ 	
+ 	
+ 	
+ 	
         </div>
         
         <footer role="contentinfo">
