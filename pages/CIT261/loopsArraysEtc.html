@@ -46,6 +46,7 @@ iniHal-scale=1.0, maximum-scale=1.0">
 	<button type="button" onclick="whileLoop()">While Loop</button>
 	<div id= "whileL"></div>
 
+ 	<br>
 
  	<h4>Here is an example of a For Loop:</h4>
  	 <p id="forLoop"></p>
@@ -66,9 +67,10 @@ iniHal-scale=1.0, maximum-scale=1.0">
 	<div id= "forL"></div>
  	
  	
+ 	<br>
+ 	<br>
  	
- 	
-<h3>Conditional Statements</h3><br>
+<h3>Conditional Statements</h3>
 
 Guess a number between 1 and 12!<br>
  	<input type="text" id="guess"><br>
@@ -90,12 +92,17 @@ Guess a number between 1 and 12!<br>
 		}
 </script>
  	
+ 	<br>
+ 	<br>
+ 	
 <h3>Functions that have Parameters and Variables</h3>
 Here is an example of a function with parameters and Variables!<br>
-<br>
+
 Click here to see who the Ninth Doctor is played by!
 	
  	<button onclick="parametersVariables('Christopher Eccleston')">Function</button>
+  	<br>
+ 	<br>
   	<script>
   		function parametersVariables(d){
   		var text = "The Doctor is played by ";
@@ -104,9 +111,10 @@ Click here to see who the Ninth Doctor is played by!
  	
  	</script>	
 
+ 	<br>
+ 	<br>
  	
- 	
-<h3>Arrays</h3><br>
+<h3>Arrays</h3>
 Add some names to an array!<br>
  	<input type="text" id="newNames"><br>
  	<button onclick="addNames()">Arrays</button>
@@ -122,13 +130,13 @@ Add some names to an array!<br>
  	
  	
  	</script>
+ 
  	
- 	
-<h3>Associative Arrays</h3><br>
-
-<br>
+<h3>Associative Arrays</h3>
  	<script>
  	//Associative Array
+ 	
+ 	function assocArray(){
  	
  	var doctorCompanions = new Array();
  	doctorCompanions['Nine'] = "Rose, Jack and Mickey";
@@ -137,16 +145,21 @@ Add some names to an array!<br>
  	doctorCompanions['Twelve'] = "Clara and Bill";
  
  
- 	document.write("The Ninth Doctor has " +  doctorCompanions['Nine'] + " as companions.<br>");
- 	document.write("The Tenth Doctor has " +  doctorCompanions['Ten'] + " as companions.<br>");
- 	document.write("The Eleventh Doctor has " +  doctorCompanions['Eleven'] + " as companions.<br>");
- 	document.write("The Twelfth Doctor has " +  doctorCompanions['Twelve'] + " as companions.<br>");
+ 	var all = "The Ninth Doctor has " +  doctorCompanions['Nine'] + " as companions.<br> The Tenth Doctor has " +  doctorCompanions['Ten'] + " as companions.<br> The Eleventh Doctor has " +  doctorCompanions['Eleven'] + " as companions.<br> The Twelfth Doctor has " +  doctorCompanions['Twelve'] + " as companions.<br>";
+ 	
+ 	
+ 	document.getElementById('assocArrayOutput').innerHTML = all;
+ 	
+ 	}
  	
 
  	</script>
  	
  	
- 	
+ 	<button onclick="assocArray()"> Associative Array Example</button>
+ 	<div id="assocArrayOutput"></div>
+ 	<br>
+ 	<br>
         </div>
         
         <footer role="contentinfo">
