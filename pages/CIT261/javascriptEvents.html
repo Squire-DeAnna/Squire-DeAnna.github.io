@@ -6,7 +6,7 @@
         <meta	name="viewport"	content="width=device-width,	
 iniHal-scale=1.0, maximum-scale=1.0">
     </head>
-    <body>
+    <body onLoad="onLoadEvent()">
         
         <header>
              <img src="/images/design4.png" 
@@ -23,35 +23,95 @@ iniHal-scale=1.0, maximum-scale=1.0">
    <div class="column2of2">
           <p> 
           <h2>Examples of Javascript Events</h2>
-          <p> Here is an example of an onClick event.
-<script>
-        function displayDate() {
-           document.getElementById("demo").innerHTML = Date();
-}
-    </script>
-          <button onclick="displayDate()">Click Me for the Time</button>
-      <p id="demo"></p>
-      
-		  <br>
-		  <p> TESTING Touch events
+          
+		<h3>onLoad Event</h3>
+          You got the alert when you opened the page that is an example of an onLoad event.<br>
 
 <script>
-box2.addEventListener('touchstart', function(e){
-        touchobj = e.changedTouches[0] // reference first touch point
-        boxleft = parseInt(box2.style.left) // get left position of box
-        startx = parseInt(touchobj.clientX) // get x coord of touch point
-        e.preventDefault() // prevent default click behavior
-    }, false)
-    </script>
-
-
-
-
-
-
-		  
-
+        function onLoadEvent() {
+        	alert("This is an example of an onLoad event.");
+		}
 </script>
+         <br>
+          
+          
+          <h3>onClick Event</h3>
+<script>
+        function onClickEvent() {
+        	var text = "This is an example of an onClick event.";
+           document.getElementById("onClickOutput").innerHTML = text;
+		}
+</script>
+          <button onclick="onClickEvent()">onClick Event Example</button><br>
+      <p id="onClickOutput"></p>
+      
+      
+      <h3>onKeyDown</h3>
+	  <input type="text" onkeydown="onKeyDownEvent()">
+<script>
+	function onKeyDownEvent() {
+  		  alert("You pressed a key inside the input field which gives you this text as an example of an onKeyDown event.");
+}
+</script>
+
+		<h3>onMouseOver</h3>
+	  
+
+	<h4 onmouseover="style.color='yellow'" onmouseout="style.color='black'">
+	 This text can change colors when you roll your cursor over it. </h4><br>
+	 
+	 
+	<h3>onTouchStart</h3>
+	This is an example of a touch sensitive item. You can either click or tap on the text to change the color.<br>
+	<script>
+	function touchStartEvent() {
+	
+	}
+	
+	</script>
+
+	<h4 ontouchstart="style.color='blue'" onclick="style.color='blue'">This text changes color</h4>
+	
+<h3> Javascript Animation and Transition</h3>
+Still in progress <br>
+<!-- <style>
+#outerbox {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background: green;
+}
+#innerbox {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: blue;
+}
+</style>
+
+<div id ="outerbox">
+<div id ="innerbox"></div>
+</div>
+
+<script>
+function animate() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = speed(frame, 5);
+  function frame() {
+    if (pos == 250) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+--!>
+
+
 
         </div>
         

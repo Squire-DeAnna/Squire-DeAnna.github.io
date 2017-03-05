@@ -21,12 +21,68 @@ iniHal-scale=1.0, maximum-scale=1.0">
             <a href="homepage.html">| CIT 261 Examples |</a>
             </nav>
         </header>
-        <div class="column1of2">
-            
-        </div>
-   <div class="column2of2">
- 	<h2>This page has not been completed</h2>
-        </div>
+        
+<h3> Object Creation Function/Properties/Method </h3>
+        Here is an example of an Object Creation Function with Properties and Methods<br>
+        
+        <script>
+        function tardis() {
+        	this.size = "Bigger on the inside";
+        	this.color = "Blue";
+        	this.shape = "Squarish";
+        	this.theTARDIS = function() {
+        		var all = '<br> Size:' + this.size + '<br>' +
+        					'Color:' + this.color + '<br>' +
+        					'Shape:' + this.shape + '<br><br>';
+        			document.write(all);
+        	};
+        }
+        
+        var tardisDescription = new tardis();
+        
+        tardisDescription.theTARDIS();
+        
+        </script>
+        
+        
+<h3> Inheritance </h3>
+        
+         <script>
+        function tardis() {
+        	this.size = "Bigger on the inside";
+        	this.color = "Blue";
+        	this.shape = "Squarish";
+        	this.theTARDIS = function() {
+        		var all = '<br> The TARDIS Description <br> ' +
+        					'Size:' + this.size + '<br>' +
+        					'Color:' + this.color + '<br>' +
+        					'Shape:' + this.shape + '<br><br>';
+        			document.write(all);
+        	};
+        }
+        
+        var tardisDescription = new tardis();
+        
+        tardisDescription.theTARDIS();
+        
+        
+        function fandomVehicles() {
+        	this.supernatural = 'Chevy Impala';
+        	this.starTrek = 'The Enterprise';
+        	this.doctorWho = 'The TARDIS';
+        		var allVehicles = '<br> Fandom Vehicles:<br>' +
+        					 this.supernatural + '<br>' +
+        					 this.starTrek + '<br>' +
+        					 this.doctorWho + '<br><br>';
+        			document.write(allVehicles);
+         }
+         
+         fandomVehicles.prototype = new tardis();
+         
+         var vehicles = new fandomVehicles();
+         
+         vehicles.theTardis();
+         </script>
         
         <footer role="contentinfo">
             <a href="/index.html">| Home |</a>
