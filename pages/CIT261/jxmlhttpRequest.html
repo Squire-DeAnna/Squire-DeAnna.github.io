@@ -25,7 +25,57 @@ iniHal-scale=1.0, maximum-scale=1.0">
             
         </div>
    <div class="column2of2">
- 	<h2>This page has not been completed</h2>
+ 	<h2>Using XMLHTTPRequest to Consume a JSON Web Service (AJAX):</h2>
+ 
+ <h3>Here are some things about me!</h3>
+ <select id="objectInput">
+ 	<option value="favorite_movie">My Favorite Movie</option>
+ 	<option value="most_recent_book">Most Recent Book I Read</option>
+ 	<option value="most_recent_movie">My Recent Movie I Watched</option>
+ 	</select>
+ 	<button onclick="getObject()"> See the results </button><br><br>
+ 	<div id="objectOutput"></div><br>
+ 
+ 
+ <script>
+ function getObject(){
+
+	var xmlhttp = new XMLHttpRequest();
+	
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			var response = JSON.parse(this.responseText);
+			handleManualObjectResponse(response);
+			
+			}
+		}
+	var input = document.getElementById('objectInput').value;
+	
+	xmlhttp.open("GET", "/ajax_info/" + input + ".txt", true);
+	
+	xmlhttp.send();
+	
+
+}
+
+function handleManualObjectResponse(response) {
+	var output = "";
+	
+	for (var i = 0; i < response.length; i++){
+			output += response[i] + "<br>";
+		}
+		
+		document.getElementById('objectOutput').innerhtml = output;
+	
+}
+</script>
+
+
+ 	
+ 	
+ 	
+ 	
+ 	
         </div>
         
         <footer role="contentinfo">
