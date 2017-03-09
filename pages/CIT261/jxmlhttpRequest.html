@@ -21,11 +21,8 @@ iniHal-scale=1.0, maximum-scale=1.0">
             <a href="homepage.html">| CIT 261 Examples |</a>
             </nav>
         </header>
-        <div class="column1of2">
-            
-        </div>
-   <div class="column2of2">
- 	<h2>Using XMLHTTPRequest to Consume a JSON Web Service (AJAX):</h2>
+       <br>
+ 	<h2>Using XMLHTTP Request to Consume a JSON Web Service (AJAX):</h2>
  
  <h3>Here are some things about me!</h3>
  <select id="objectInput">
@@ -51,7 +48,7 @@ iniHal-scale=1.0, maximum-scale=1.0">
 		}
 	var input = document.getElementById('objectInput').value;
 	
-	xmlhttp.open("GET", "/ajax_info/" + input + ".txt", true);
+	xmlhttp.open("GET", "ajax_info/" + input + ".txt", true);
 	
 	xmlhttp.send();
 	
