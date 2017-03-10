@@ -25,7 +25,7 @@ maximum-scale=1.0">
  	<h2>Using XMLHTTP Request to Consume a JSON Web Service (AJAX):</h2><br>
  
  <h3>Here are some things about me!</h3>
- <select id="input">
+ <select id="selectInput">
  	<option value="favorite_movie">My Favorite Movie</option>
  	<option value="most_recent_book">Most Recent Book I Read</option>
  	<option value="most_recent_movie">My Recent Movie I Watched</option>
@@ -41,12 +41,12 @@ maximum-scale=1.0">
 	
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200){
-			var r = JSON.parse(this.responseText);
-			handleResponse(r);
+			var response = JSON.parse(this.responseText);
+			handleResponse(response);
 			
 			}
 		}
-	var input = document.getElementById('input').value;
+	var input = document.getElementById('selectInput').value;
 	
 	xhttp.open("GET", "ajax_info/" + input + ".txt", true);
 	
@@ -55,11 +55,11 @@ maximum-scale=1.0">
 
 }
 
-function handleResponse(r) {
+function handleResponse(response) {
 	var output = "";
 	
-	for (var i = 0; i < r.length; i++){
-			output += r[i] + "<br>";
+	for (var i = 0; i < response.length; i++){
+			output += response[i] + "<br>";
 		}
 		
 		document.getElementById('responseOutput').innerHTML = output;
