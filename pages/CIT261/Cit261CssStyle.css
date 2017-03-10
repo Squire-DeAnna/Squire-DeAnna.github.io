@@ -1,5 +1,5 @@
 
-#div1{
+#box1{
 width: 100px;
 height: 100px;
 backgroud: green;
@@ -7,6 +7,6 @@ backgroud: green;
 
 }
 
-#div1:hover {
+#box1:hover {
 
 }
