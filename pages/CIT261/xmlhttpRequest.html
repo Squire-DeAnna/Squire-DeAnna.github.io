@@ -41,7 +41,7 @@ maximum-scale=1.0">
 	
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200){
-			var r = JSON.parse(this.rText);
+			var r = JSON.parse(this.responseText);
 			handleResponse(r);
 			
 			}
