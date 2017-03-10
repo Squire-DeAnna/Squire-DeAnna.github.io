@@ -24,32 +24,32 @@ This page will tell people about our company
  	<h2>Using XMLHTTP Request to Consume a JSON Web Service (AJAX):</h2><br>
  
  <h3>Here are some things about me!</h3>
- <select id="objectInput">
+ <select id="input">
  	<option value="favorite_movie">My Favorite Movie</option>
  	<option value="most_recent_book">Most Recent Book I Read</option>
  	<option value="most_recent_movie">My Recent Movie I Watched</option>
  	</select>
- 	<button onclick="getObject()"> See the results </button><br><br>
- 	<div id="objectOutput"></div><br>
+ 	<button onclick="getOInfo()"> See the results </button><br><br>
+ 	<div id="output"></div><br>
  
  
  <script>
- function getObject(){
+ function getInfo(){
 
-	var xmlhttp = new XMLHttpRequest();
+	var xhttp = new XMLHttpRequest();
 	
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200){
 			var response = JSON.parse(this.responseText);
 			handleManualObjectResponse(response);
 			
 			}
 		}
-	var input = document.getElementById('objectInput').value;
+	var input = document.getElementById('input').value;
 	
-	xmlhttp.open("GET", "ajax_info/" + input + ".txt", true);
+	xhttp.open("GET", "ajax_info/" + input + ".txt", true);
 	
-	xmlhttp.send();
+	xhttp.send();
 	
 
 }
@@ -61,7 +61,7 @@ function handleManualObjectResponse(response) {
 			output += response[i] + "<br>";
 		}
 		
-		document.getElementById('objectOutput').innerHTML = output;
+		document.getElementById('output').innerHTML = output;
 	
 }
 </script>
