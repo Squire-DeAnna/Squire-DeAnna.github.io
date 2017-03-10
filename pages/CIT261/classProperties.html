@@ -25,7 +25,45 @@ iniHal-scale=1.0, maximum-scale=1.0">
             
         </div>
    <div class="column2of2">
- 	<h2>This page has not been completed</h2>
+ 	<h2 id="h2color">Manipulating CSS Class Properties Using Javascript</h2>
+Click below to change the background color!<br>
+<button type="button" onclick="changeBackground()">Change Background Color</button><br><br>
+ 	
+ 	<script>
+ 	function changeBackground(){
+ 	var change = document.createTextNode("body {background-color: blue;}");
+ 	var apply = document.createElement("STYLE");
+ 	apply.appendChild(change);
+ 	document.head.appendChild(apply);
+ 	}
+ 	</script>
+Click below to change the header color!<br>
+<button type="button" onclick="changeH2Color()">Change Header Color</button><br><br>
+ 	<script>
+ 	
+ 	function changeH2Color(){
+ 	var change = document.createTextNode("h2 {color: green;}");
+ 	var apply = document.createElement("STYLE");
+ 	apply.appendChild(change);
+ 	document.head.appendChild(apply);
+ 	}
+ 	
+ 	
+ 	</script>
+ <p id=text>Click below to change this font to italic!</p><br>
+<button type="button" onclick="changeH2Font()">Change Font Style</button><br><br>
+ 	<script>
+ 	
+ 	function changeH2Font(){
+ 	document.getElementById("text").style.fontStyle = "italic";
+ 	}
+</script>	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
         </div>
         
         <footer role="contentinfo">

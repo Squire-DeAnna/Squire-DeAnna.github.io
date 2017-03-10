@@ -73,43 +73,57 @@ iniHal-scale=1.0, maximum-scale=1.0">
 	<h4 ontouchstart="style.color='blue'" onclick="style.color='blue'">This text changes color</h4>
 	
 <h3> Javascript Animation and Transition</h3>
-Still in progress <br>
-<!-- <style>
-#outerbox {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  background: green;
-}
-#innerbox {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  background-color: blue;
-}
-</style>
 
-<div id ="outerbox">
-<div id ="innerbox"></div>
+
+<button onclick="myAnimation()">My Animation</button> <br><br>
+
+
+<div id ="frame">
+<div id ="animatedBox"></div>
 </div>
 
+<style>
+	#frame{
+	position:relative;
+	overflow:hidden;
+	width:320px;
+	height:30px;
+	border:3px
+	solid #000;
+	}
+	
+	#animatedBox{
+	position:absolute;
+	background-color:green;
+	width:20px;
+	height:20px;
+	padding-top:10px;
+	}
+	
+	#animatedBox2{
+	position:absolute;
+	background-color:blue;
+	width:20px;
+	height:20px;
+	padding-top:10px;
+	}
+	
+</style>
 <script>
-function animate() {
-  var elem = document.getElementById("animate");   
-  var pos = 0;
-  var id = speed(frame, 5);
-  function frame() {
-    if (pos == 250) {
+function myAnimation() {
+  var elem = document.getElementById("animatedBox");   
+  var left = 0;
+  var id = setInterval(movement, 5);
+  function movement() {
+  	left++; 
+      elem.style.left = left + 'px'; 
+    if (left == 300) {
       clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = pos + 'px'; 
-      elem.style.left = pos + 'px'; 
+      }
     }
-  }
 }
 </script>
---!>
+
 
 
 
