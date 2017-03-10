@@ -8,7 +8,7 @@ This page will tell people about our company
         <link href="/css/styleguide.css" type="text/css" rel="stylesheet" />
         <link href="/css/normalize.css" type="text/css" rel="stylesheet" media='screen'/>
         <meta	name="viewport"	content="width=device-width,	
-iniHal-scale=1.0, maximum-scale=1.0">
+maximum-scale=1.0">
     </head>
     <body>
         
@@ -41,7 +41,7 @@ iniHal-scale=1.0, maximum-scale=1.0">
 	
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200){
-			var response = JSON.parse(this.responseText);
+			var r = JSON.parse(this.rText);
 			handleResponse(r);
 			
 			}
