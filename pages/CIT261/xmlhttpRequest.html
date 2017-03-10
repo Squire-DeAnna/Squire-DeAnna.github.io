@@ -25,44 +25,41 @@ iniHal-scale=1.0, maximum-scale=1.0">
  	<h2>Using XMLHTTP Request to Consume a JSON Web Service (AJAX):</h2><br>
  
  <h3>Here are some things about me!</h3>
- <select id="objectInput">
+ <select id="infoInput">
  	<option value="favorite_movie">My Favorite Movie</option>
  	<option value="most_recent_book">Most Recent Book I Read</option>
  	<option value="most_recent_movie">My Recent Movie I Watched</option>
  	</select>
- 	<button onclick="getObject()"> See the results </button><br><br>
- 	<div id="objectOutput"></div><br>
+ 	<button onclick="getInfo()"> See the results </button><br><br>
+ 	<div id="infoOutput"></div><br>
  
  
  <script>
- function getObject(){
-
+ function getInfo(){
 	var xmlhttp = new XMLHttpRequest();
 	
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
 			var response = JSON.parse(this.responseText);
-			handleManualObjectResponse(response);
+			handleResponse(response);
 			
 			}
 		}
-	var input = document.getElementById('objectInput').value;
+	var input = document.getElementById('infoInput').value;
 	
-	xmlhttp.open("GET", "pages/CIT261/ajax_info/" + input + ".txt", true);
+	xmlhttp.open("GET", "ajax_info/" + input + ".txt", true);
 	
 	xmlhttp.send();
 	
-
 }
-
-function handleManualObjectResponse(response) {
+function handleResponse(response) {
 	var output = "";
 	
 	for (var i = 0; i < response.length; i++){
 			output += response[i] + "<br>";
 		}
 		
-		document.getElementById('objectOutput').innerHTML = output;
+		document.getElementById('infoOutput').innerHTML = output;
 	
 }
 </script>
@@ -81,3 +78,5 @@ function handleManualObjectResponse(response) {
         </footer>
     </body>
 </html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help

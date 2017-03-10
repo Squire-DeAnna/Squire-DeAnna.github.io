@@ -23,10 +23,6 @@ iniHal-scale=1.0, maximum-scale=1.0">
           <h3>Video Tag</h3><br>
           Here is an example of a video tag:<br>
           <br>
-          <br>&lt;video width="320" height="240" controls&gt;<br>
-            &lt;source src="fasting.mp4" type="video/mp4"&gt;<br>
-            Your browser doesn't work. Try switching to Chrome.<br>
-            &lt;/video&gt;<br>
           <video width="320" height="240" controls>
             <source src="fasting.mp4" type="video/mp4">
             Your browser doesn't work. Try switching to Chrome.
@@ -35,10 +31,6 @@ iniHal-scale=1.0, maximum-scale=1.0">
             <h3>Audio Tag</h3><br>
             Here is an example of an audio tag:<br>
             <br>
-            &lt;audio controls&gt;<br>
-            &lt;source  src="claraTardis.mp3" type="audio/mp3"&gt;<br>
-            Your browser doesn't work. Try switching to Chrome.<br>
-            &lt;audio&gt;<br>
             <audio controls>
             <source  src="claraTardis.mp3" type="audio/mp3">
             Your browser doesn't work. Try switching to Chrome.<br>
@@ -47,41 +39,46 @@ iniHal-scale=1.0, maximum-scale=1.0">
             <h3>Canvas Tag</h3><br>
             Here is an example of a Canvas using Javascript:<br>
             <br>
-            &lt;canvas id="canvas" width="300" height="300" style="border:2px solid #fff000;" &gt;<br>
-            Your browser doesn't work. Try using Chrome&lt;/canvas&gt;<br>
-           	&lt;script&gt;<br>
-            var canvas = document.getElementById("canvas");<br>
-           <i>// draw line 1</i><br>
-			var line1 = canvas.getContext("2d");<br>
-			line1.moveTo(300,0);<br>
-			line1.lineTo(0,300);<br>
-			line1.stroke();<br>
-			<i>// draw line 2</i><br>
-			var line2 = canvas.getContext("2d");<br>
-			line2.moveTo(0,0);<br>
-			line2.lineTo(300,300);<br>
-			line2.stroke();<br>
-			<i>// draw line 3</i><br>
-			var line3 = canvas.getContext("2d");<br>
-			line3.moveTo(0,150);<br>
-			line3.lineTo(300,150);<br>
-			line3.stroke();<br>
-			<i>// draw line 4</i><br>
-			var line4 = canvas.getContext("2d");<br>
-			line4.moveTo(150,0);<br>
-			line4.lineTo(150,300);<br>
-			line4.stroke();<br>
-			&lt;/script&gt;<br>
+           
 			<br>
+			Change the colors of the lines by clicking on the buttones below!<br>
+<input type= "button" value= "Blue" id= "blue" onclick= "BlueLines()" />
+
+<input type= "button" value= "Green" id= "green" onclick= "GreenLines()" />
+
+<input type= "button" value= "Yellow" id= "yellow" onclick= "YellLines()" />
+
+<input type= "button" value= "Red" id= "red" onclick= "RedLines()" /><br>
     <canvas id="canvas" width="300" height="300" 
-            style="border:2px solid #fff000;" >Your browser doesn't work. Try using 
+            style="border:2px solid #000000;" >Your browser doesn't work. Try using 
             Chrome.</canvas>
         <script>
+function BlueLines() {
+line1.strokeStyle= "#701be0";
+line1.stroke();
+}
+
+function GreenLines() {
+line1.strokeStyle= "#1be050";
+line1.stroke();
+}
+
+function YellLines() {
+line1.strokeStyle= "#fcfc00";
+line1.stroke();
+}
+
+function RedLines() {
+line1.strokeStyle= "#fc0d00";
+line1.stroke();
+}
+        
             var canvas = document.getElementById("canvas");
             // draw line 1 
 			var line1 = canvas.getContext("2d");
 			line1.moveTo(300,0);
 			line1.lineTo(0,300);
+			line1.strokeStyle= "#000000";
 			line1.stroke();
 			// draw line 2
 			var line2 = canvas.getContext("2d");

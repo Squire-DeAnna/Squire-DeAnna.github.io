@@ -8,7 +8,84 @@ This page will tell people about our company
         <link href="/css/styleguide.css" type="text/css" rel="stylesheet" />
         <link href="/css/normalize.css" type="text/css" rel="stylesheet" media='screen'/>
         <meta	name="viewport"	content="width=device-width,	
-iniHal-scale=1.0, maximum-scale=1.0">
+ maximum-scale=1.0">
+<script>
+function whileLoop(){
+			var text = "";
+			var n = 1;
+			while (n <= 12) {
+			    text += "Doctor " + n + "<br>";
+			    n++;
+			}
+		document.getElementById("whileL").innerHTML = text;
+		}
+
+function forLoop(){
+			var companions = ["Rose", "Martha", "Donna", "Amy", "Rory", "Clara"];
+			var n, length, text;
+			for (n = 0, length = companions.length, text = ""; n < length; n++) 
+				{
+			    text += "The Doctor's companion is " + companions[n] + "<br>";
+			}
+
+		document.getElementById("forL").innerHTML = text;
+		}
+
+function guessNumber() {
+				var greeting;
+			    var number = parseFloat(document.getElementById('guess').value);
+		    if (number < 9) {
+		        greeting = "You guessed " + number + ". That's too low, try again!";
+ 		   } else if (number > 9) {
+		        greeting = "You guessed " + number + ". That's too high, try again!";
+		   }else {
+		        greeting = "You guessed " + number + ". You're right!";
+		   }
+		document.getElementById("ifElse").innerHTML = greeting;
+		}
+		
+function parametersVariables(d){
+  		var text = "The Doctor is played by ";
+  		alert(text + d);
+  	} 
+
+var globalText = "This text can be found in a global variable";
+
+function variables(){
+  		document.getElementById("variablesOutput").innerHTML = globalText;
+  		}
+
+function variables2(){
+  		var localText = "This text is located in a local variable.";
+  		var combined = globalText + "<br>" + localText;
+  		document.getElementById("variables2Output").innerHTML = combined;
+  		}
+  		
+var names = new Array();
+
+function addNames(){
+ 	names.push(document.getElementById('newNames').value);
+ 	document.getElementById('newNames').value=' ';
+ 	document.getElementById('arrayOutput').innerHTML = names;
+ 	}
+ 	
+function assocArray(){
+ 	
+ 	var doctorCompanions = new Array();
+ 	doctorCompanions['Nine'] = "Rose, Jack and Mickey";
+ 	doctorCompanions['Ten'] = "Rose, Martha, Donna and Wilfred";
+ 	doctorCompanions['Eleven'] = "Amy, Rory, River and Clara";
+ 	doctorCompanions['Twelve'] = "Clara and Bill";
+ 
+ 
+ 	var all = "The Ninth Doctor has " +  doctorCompanions['Nine'] + " as companions.<br> The Tenth Doctor has " +  doctorCompanions['Ten'] + " as companions.<br> The Eleventh Doctor has " +  doctorCompanions['Eleven'] + " as companions.<br> The Twelfth Doctor has " +  doctorCompanions['Twelve'] + " as companions.<br>";
+ 	
+ 	
+ 	document.getElementById('assocArrayOutput').innerHTML = all;
+ 	
+ 	}
+</script>
+
     </head>
     <body>
         
@@ -27,87 +104,41 @@ iniHal-scale=1.0, maximum-scale=1.0">
 
 <h3>Loops</h3>
  	<h4>Here is an example of a While Loop:</h4>
- 	<script>
-		function whileLoop(){
-			var text = "";
-			var n = 1;
-			while (n <= 12) {
-			    text += "Doctor " + n + "<br>";
-			    n++;
-			}
-		document.getElementById("whileL").innerHTML = text;
-		}
-		</script>
 	<button type="button" onclick="whileLoop()">While Loop</button>
-	<div id= "whileL"></div>
-
- 	<br>
+	<div id= "whileL"></div><br>
 
  	<h4>Here is an example of a For Loop:</h4>
- 	 <p id="forLoop"></p>
-
-		<script>
-		function forLoop(){
-			var companions = ["Rose", "Martha", "Donna", "Amy", "Rory", "Clara"];
-			var n, length, text;
-			for (n = 0, length = companions.length, text = ""; n < length; n++) 
-				{
-			    text += "The Doctor's companion is " + companions[n] + "<br>";
-			}
-
-		document.getElementById("forL").innerHTML = text;
-		}
-		</script>
-	<button type="button" onclick="forLoop()">For Loop</button>
-	<div id= "forL"></div>
- 	
- 	
- 	<br>
- 	<br>
+ 	 <p id="forLoop"></p><br>
+	<button type="button" onclick="forLoop()">For Loop</button><br>
+	<div id= "forL"></div><br>
+	<br>
  	
 <h3>Conditional Statements</h3>
 
 Guess a number between 1 and 12!<br>
  	<input type="text" id="guess"><br>
  	<button onclick="guessNumber()">Conditional Statements</button>
-	<div id= "ifElse"></div>
-
-	<script>
-		function guessNumber() {
-				var greeting;
-			    var number = parseFloat(document.getElementById('guess').value);
-		    if (number < 9) {
-		        greeting = "You guessed " + number + ". That's too low, try again!";
- 		   } else if (number > 9) {
-		        greeting = "You guessed " + number + ". That's too high, try again!";
-		   }else {
-		        greeting = "You guessed " + number + ". You're right!";
-		   }
-		document.getElementById("ifElse").innerHTML = greeting;
-		}
-</script>
- 	
- 	<br>
+	<div id= "ifElse"></div><br>
  	<br>
  	
 <h3>Functions that have Parameters and Variables</h3>
-Here is an example of a function with parameters and Variables!<br>
+Here is an example of a function with parameters!<br>
 
-Click here to see who the Ninth Doctor is played by!
-	
- 	<button onclick="parametersVariables('Christopher Eccleston')">Function</button>
+Click here to see who the Ninth Doctor is played by!<br>
+	<button onclick="parametersVariables('Christopher Eccleston')">Parameters</button><br>
+ 	<br>
+
+
+Click here for an example of a global variable:<br>
+ 	<button onclick="variables()">Variables</button>
+ 	<p id='variablesOutput'></p>
   	<br>
- 	<br>
-  	<script>
-  		function parametersVariables(d){
-  		var text = "The Doctor is played by ";
-  		alert(text + d);
-  	}  		
- 	
- 	</script>	
+  	
+Click here for an example of a global and local variables combined:<br>
+ 	<button onclick="variables2()">Variables</button>
+ 	<p id='variables2Output'></p>
+  	<br>
 
- 	<br>
- 	<br>
  	
 <h3>Arrays</h3>
 Add some names to an array!<br>
@@ -115,42 +146,11 @@ Add some names to an array!<br>
  	<button onclick="addNames()">Arrays</button>
  	<div id= "arrayOutput"></div>
 <br>
- 	<script>
- 	var names = new Array();
- 	function addNames(){
- 	names.push(document.getElementById('newNames').value);
- 	document.getElementById('newNames').value=' ';
- 	document.getElementById('arrayOutput').innerHTML = names;
- 	}
- 	
- 	
- 	</script>
+
  
  	
 <h3>Associative Arrays</h3>
- 	<script>
- 	//Associative Array
- 	
- 	function assocArray(){
- 	
- 	var doctorCompanions = new Array();
- 	doctorCompanions['Nine'] = "Rose, Jack and Mickey";
- 	doctorCompanions['Ten'] = "Rose, Martha, Donna and Wilfred";
- 	doctorCompanions['Eleven'] = "Amy, Rory, River and Clara";
- 	doctorCompanions['Twelve'] = "Clara and Bill";
- 
- 
- 	var all = "The Ninth Doctor has " +  doctorCompanions['Nine'] + " as companions.<br> The Tenth Doctor has " +  doctorCompanions['Ten'] + " as companions.<br> The Eleventh Doctor has " +  doctorCompanions['Eleven'] + " as companions.<br> The Twelfth Doctor has " +  doctorCompanions['Twelve'] + " as companions.<br>";
- 	
- 	
- 	document.getElementById('assocArrayOutput').innerHTML = all;
- 	
- 	}
- 	
 
- 	</script>
- 	
- 	
  	<button onclick="assocArray()"> Associative Array Example</button>
  	<div id="assocArrayOutput"></div>
  	<br>

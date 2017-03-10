@@ -8,7 +8,25 @@ This page will tell people about our company
         <link href="/css/styleguide.css" type="text/css" rel="stylesheet" />
         <link href="/css/normalize.css" type="text/css" rel="stylesheet" media='screen'/>
         <meta	name="viewport"	content="width=device-width,	
-iniHal-scale=1.0, maximum-scale=1.0">
+maximum-scale=1.0">
+
+	<script>
+ 	function stringify(){
+ 		var me = {
+ 		"fruit":"Apples",
+ 		"type":"Gala",
+ 		"quantity":"10 bushels",
+ 		};
+ 		
+ 		var string = JSON.stringify(me);
+ 		var object = JSON.parse(string);
+ 		
+ 		document.getElementById('stringifyOutput').innerHTML = string;
+ 		document.getElementById('parseOutput').innerHTML = "I have " + object.quantity + " of " + object.type + " " + object.fruit;
+ 	}
+
+ 	
+ 	</script>
     </head>
     <body>
         
@@ -23,29 +41,12 @@ iniHal-scale=1.0, maximum-scale=1.0">
         </header>
       
  	<h2>JSON Parse and Stringify</h2>
- 	<script>
- 	function stringify(){
- 		var me = {
- 		"fruit":"Apples",
- 		"type":"Gala",
- 		"quantity":"10 bushels",
- 		};
- 		
- 		var string = JSON.stringify(me);
- 		var object = JSON.parse(string);
- 		
- 		document.getElementById('stringifyOutput').innerHTML = string;
- 		document.getElementById('parseOutput').innerHTML = "I have " + object.quantity + " of " + object.type + " " + object.fruit;
- 	}
- 	
- 	</script>
- 	
- 	
- 	<button onclick="stringify()">Stringify & Parse Example</button>
+<button onclick="stringify()">Stringify & Parse Example</button>
  	<div id="stringifyOutput"></div>
  	<br>
  	<div id="parseOutput"></div>
  	<br>
+
  	
  	
  	
