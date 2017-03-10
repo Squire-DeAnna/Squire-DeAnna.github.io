@@ -7,7 +7,8 @@ This page will tell people about our company
         <meta charset="UTF-8">
         <link href="/css/styleguide.css" type="text/css" rel="stylesheet" />
         <link href="/css/normalize.css" type="text/css" rel="stylesheet" media='screen'/>
-        <meta	name="viewport"	content="width=device-width, maximum-scale=1.0">
+        <meta	name="viewport"	content="width=device-width,	
+iniHal-scale=1.0, maximum-scale=1.0">
     </head>
     <body>
         
@@ -29,8 +30,8 @@ This page will tell people about our company
  	<option value="most_recent_book">Most Recent Book I Read</option>
  	<option value="most_recent_movie">My Recent Movie I Watched</option>
  	</select>
- 	<button onclick="getInfo()"> See the results </button><br><br>
- 	<div id="output"></div><br>
+ 	<button onclick="getInfo"> See the results </button><br><br>
+ 	<div id="responseOutput"></div><br>
  
  
  <script>
@@ -61,7 +62,7 @@ function handleResponse(r) {
 			output += r[i] + "<br>";
 		}
 		
-		document.getElementById('output').innerHTML = output;
+		document.getElementById('responseOutput').innerHTML = output;
 	
 }
 </script>
