@@ -5,5 +5,8 @@ background: green;
 }
 
 .box1:hover {
+  width: 300px;
+  height: 300px;
+  background: blue;
 
 }
