@@ -7,9 +7,59 @@ This page will tell people about our company
         <meta charset="UTF-8">
         <link href="/css/styleguide.css" type="text/css" rel="stylesheet" />
         <link href="/css/normalize.css" type="text/css" rel="stylesheet" media='screen'/>
-        <link href="Cit261CssStyle.css" type="text/css" rel="stylesheet" media='screen'/>
         <meta	name="viewport"	content="width=device-width,	
 iniHal-scale=1.0, maximum-scale=1.0">
+<style>
+ 	#box1 {
+    width: 150px;
+    height: 150px;
+    background: blue;
+    -webkit-transition: height 3s, width 2s; /* Safari */
+    transition: height 3s, width 2s;
+    
+}
+	#box1:hover {
+	width: 200px;
+	height: 200px;
+}
+
+	#box2 {
+	width: 150px;
+    height: 150px;
+    background: green;
+    animation-name: animate;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    -webkit-animation-name: animate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 2;
+}
+
+@keyframes animate{
+	from{background:green;}
+	to{background:red;}
+}
+
+#box3 {
+	width: 150px;
+	height: 150px;
+	background: yellow;
+}
+
+#box4 {
+	width: 150px;
+	height: 150px;
+	background: blue;
+}
+
+@keyframes javascriptAnimation {
+from {height: 150px}
+to {height: 250px}
+}
+
+
+</style>
+
     </head>
     <body>
         
@@ -22,11 +72,50 @@ iniHal-scale=1.0, maximum-scale=1.0">
             <a href="homepage.html">| CIT 261 Examples |</a>
             </nav>
         </header>
+<<<<<<< HEAD
+
+=======
        <div>
+>>>>>>> origin/master
  	<h2>CSS Animations and Transitions</h2>
+<h4>Examples of CSS transitions and Animations</h4><br>
+Hover over for to see a transition:<br>
+ 	<div id="box1"></div><br>
+This box automatically does an animation when the page loads:<br>
  	
+<<<<<<< HEAD
+ 	<div id="box2"></div><br>
+
+<h4>Examples of Triggering CSS transitions and Animations with Javascript</h4><br>
+Transition:<br>
+	<script>
+		function transition(element, color){
+		element = document.getElementById(element);
+		element.style.transition = "background 1s linear 0s"
+		element.style.background = color;
+		
+		}
+	</script>
+	<button onclick="transition('box3', 'blue')">See Transition</button><br>
+	<div id="box3"></div><br>
+Animation:<br>
+	<div>
+ <button onclick="startAnimation()">Start</button>
+ <div id="box4"></div> 
+</div>
+
+
+
+<script>
+function startAnimation() {
+    document.getElementById("box4").style.animation = "javascriptAnimation 3s linear 1";
+}
+</script>
+	
+=======
  	<div class= box1 id="transition"></div>
  	
+>>>>>>> origin/master
         </div>
         
         <footer role="contentinfo">
