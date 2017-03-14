@@ -6,17 +6,18 @@ function changeAudio(audioSourceLink) {
     var audio = document.getElementById("audioPlayer"),
             source = document.getElementById("ogg_src");
     		
-    audioSource.src = audioSourceLink;
+    source.src = audioSourceLink;
     audio.pause();
     audio.load();
     audio.play();
     
  }
  
- function showMusicExample(musicExample) {
- 	var musicExample = document.getElementById("canvasMusicExample");
+ function showMusicExample(musicSourceLink) {
+ 	var musicExample = document.getElementById("canvasMusicExample"),
     		source = document.getElementById("jpg_src");
-    		musicExampleSource.src = musicSourceLink;
+     
+    	source.src = musicSourceLink;
  }
  
  function changeMedia(musicExample, audioSourceLink) {
