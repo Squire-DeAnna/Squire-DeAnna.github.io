@@ -12,16 +12,24 @@ function changeAudio(audioSourceLink) {
     audio.play();
     
  }
+
  
- function showMusicExample(musicSourceLink) {
- 	var musicExample = document.getElementById("canvasMusicExample"),
-    		source = document.getElementById("jpg_src");
-     
-    	source.src = musicSourceLink;
- }
+ var canvas = document.getElementById('canvasMusicExample'),
+context = canvas.getContext('2d');
+
+showMusicExample();
+
+function showMusicExample(imageSource)
+{
+  musicExampleImage = new Image();
+  musicExampleImage.src = imageSource;
+  musicExampleImage.onclick = function(){
+    context.drawImage(musicExampleImage, 723, 69);
+  }
+}
  
- function changeMedia(musicExample, audioSourceLink) {
- 	showMusicExample(musicExample);
+ function changeMedia(imageSource, audioSourceLink) {
+ 	showMusicExample(imageSource);
  	changeAudio(audioSourceLink);
  	} 
  
