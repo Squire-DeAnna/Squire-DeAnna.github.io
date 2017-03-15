@@ -13,12 +13,20 @@
     
  } */
     
-document.getElementById("canvasMusicExample").addEventListener('onclick', showMusicExample(imageSource) {
-    var canvas = document.getElementById("canvasMusicExample");
-    var context = canvas.getContext("2d");
+function showMusicExample(imageSource) {
+    var musicExample = document.getElementById("div1");
     var image = imageSource;
-    context.drawImage(image, 10, 10);
-});
+    var img = document.createElement("img");
+}
+
+function showMusicExample(imageSource)
+{
+image = document.getElementById('exampleImage');
+image.src = imageSource;
+    document.getElementById("musicExample").innerHTML = imageSource;
+}
+    
+    
 /* function changeMedia(imageSource, audioSourceLink) {
  	showMusicExample(imageSource);
  	changeAudio(audioSourceLink);
@@ -40,8 +48,9 @@ Here are some sets of rhythm lines and audio recordings that will help you pract
 changeAudio("media/rhythmResources/1.ogg")
 showMusicExample("media/rhythmResources/1.jpg")-->
 
-<canvas id="canvasMusicExample" height="89" width="743" style="border:2px solid #000000;"></canvas><br>
+<span onclick="changeImage('contact.png')"></span><br>
 
+    <div id="musicExample"></div>
 
 <audio id= 'audioPlayer' controls>
       <source id="ogg_src" src="" type="audio/ogg" />
