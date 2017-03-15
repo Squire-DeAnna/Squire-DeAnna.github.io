@@ -12,13 +12,11 @@
     audio.play();
     
  } */
+
     
-
-
 function showMusicExample(imageSource){
-var image = document.getElementById('exampleImage');
+image = document.getElementById('exampleImg');
 image.src = imageSource;
-    document.getElementById("musicExample").innerHTML = imageSource;
 }
     
     
@@ -43,7 +41,7 @@ Here are some sets of rhythm lines and audio recordings that will help you pract
 changeAudio("media/rhythmResources/1.ogg")
 showMusicExample("media/rhythmResources/1.jpg")-->
 
-    <div id="musicExample"></div><br>
+ <img id="exampleImg" src="imageSource" /><br>
 
 <audio id= 'audioPlayer' controls>
       <source id="ogg_src" src="" type="audio/ogg" />
