@@ -2,7 +2,7 @@
 
 <head>
 <script>
-/*function changeAudio(audioSourceLink) {
+function changeAudio(audioSourceLink) {
     var audio = document.getElementById("audioPlayer"),
             source = document.getElementById("ogg_src");
     		
@@ -11,7 +11,7 @@
     audio.load();
     audio.play();
     
- } */
+ } 
 
     
 function showMusicExample(imageSource){
@@ -20,10 +20,10 @@ image.src = imageSource;
 }
     
     
-/* function changeMedia(imageSource, audioSourceLink) {
+function changeMedia(imageSource, audioSourceLink) {
  	showMusicExample(imageSource);
  	changeAudio(audioSourceLink);
- 	} */
+ 	} 
  
 
  
@@ -36,12 +36,12 @@ image.src = imageSource;
 Here are some sets of rhythm lines and audio recordings that will help you practice your rhythm.
 
 
-<button id="Example1" onclick='showMusicExample("media/rhythmResources/1.jpg")'>Example 1</button><br><br>
+<button id="Example1" onclick='changeMedia("media/rhythmResources/1.jpg", "media/rhythmResources/1.ogg")'>Example 1</button><br><br>
 <!--changeMedia("media/rhythmResources/1.jpg", "media/rhythmResources/1.ogg") 
 changeAudio("media/rhythmResources/1.ogg")
 showMusicExample("media/rhythmResources/1.jpg")-->
 
- <div id="exampleImg" src="media/rhythmResources/4.jpg" /><br>
+ <div id="exampleImg" src="imageSource" /><br>
 
 <audio id= 'audioPlayer' controls>
       <source id="ogg_src" src="" type="audio/ogg" />
