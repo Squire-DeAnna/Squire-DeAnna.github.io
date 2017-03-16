@@ -4,10 +4,10 @@
     </div>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Practice</a>
+        <a href="/pages/timer.php">Practice</a>
         <a href="#">Calendar</a>
         <p>Resources</p>
-        <a href="#">  Tuning</a>
+        <a href="/pages/tuning.php">  Tuning</a>
         <a href="#">  Rhythms</a>
         <a href="#">  Duets</a>
         <a href="#">  Charts</a>
