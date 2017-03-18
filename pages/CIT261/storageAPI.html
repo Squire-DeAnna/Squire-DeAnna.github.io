@@ -5,26 +5,24 @@ This page will tell people about our company
 <html>
     <head>
         <meta charset="UTF-8">
-       
-	<style>
- 	textarea {
- 	height:100px;
- 	width:200px;
- 	</style>
-	<script>
- 	var bookList = new Array()
- 	function saveBookList(){
- 		bookList.push(document.getElementById('books').value);
+        <link href="/css/styleguide.css" type="text/css" rel="stylesheet" />
+        <link href="/css/normalize.css" type="text/css" rel="stylesheet" media='screen'/>
+        <script>
+ 	
+ 		var bookList = new Array()
+ 		function saveBookList(){
+ 			bookList.push(document.getElementById('books').value);
 			
-			localStorage.setItem("list", JSON.stringify(bookList));
-			document.getElementById('books').value='';
-			document.getElementById("showList").innerHTML = "This is your list <br>" + bookList;
+					localStorage.setItem("list", JSON.stringify(bookList));
+					document.getElementById('books').value='';
+					document.getElementById("showList").innerHTML = "This is your list <br>" + bookList;
 	}
 		
 	function getList(){
 			document.getElementById("showList2").innerHTML = localStorage.list;
 	}
 		
+	
 	function saveBookDetails(){
  		var bookDetails = {
  		"Name":document.getElementById('bookName').value,
@@ -32,14 +30,14 @@ This page will tell people about our company
  		"Genre":document.getElementById('bookGenre').value,
  		};
 			
-		localStorage.setItem("details", JSON.stringify(bookDetails));
-		var getStory = localStorage.getItem("details");
+					localStorage.setItem("details", JSON.stringify(bookDetails));
+					var getStory = localStorage.getItem("details");
 					
-		document.getElementById("showBookDetails").innerHTML = getStory;
+					document.getElementById("showBookDetails").innerHTML = getStory;
 					
 	}
-		
-	function saveBook(){
+	
+ 	function saveBook(){
  		var bookName = document.getElementById('bookName_input').value;
  		var bookInfo = document.getElementById('bookInfo_input').value;
  		
@@ -53,9 +51,9 @@ This page will tell people about our company
  		
  		document.getElementById("bookInfo_input").value = bookInfo;
  	}
-	
-	
+ 	
 	</script>
+
     </head>
     <body>
         
@@ -68,8 +66,10 @@ This page will tell people about our company
             <a href="homepage.html">| CIT 261 Examples |</a>
             </nav>
         </header>
-	  
-        
+        <div class="column1of2">
+            
+        </div>
+   <div>
  	<h2> Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays and Objects</h2><br>
 
  	
@@ -83,7 +83,7 @@ This page will tell people about our company
 	
 <button onclick="getList()">Call List</button>
  <div id="showList2"></div><br></p>
-	
+
  	<p>
  	Now you may want to put a little more information in about your books. Try adding in a few more details into this associative array.<br>
  	Book Name:<input type= "text" id="bookName"><br>
@@ -92,7 +92,7 @@ This page will tell people about our company
  	<button onclick="saveBookDetails()">Save Book Details</button><br>
  	<div id="showBookDetails"></div><br>
  	</p>
- 	
+ 
  	How about we make this even easier and put the details and a text box that can be associated with the title so you can retrieve it easier.<br>
  	Book Name: <input type= "text" id="bookName_input"><br>
  	<textarea id="bookInfo_input">Author:
@@ -103,6 +103,19 @@ Published:
 <button onclick="saveBook()">Save Book Details</button><br>
 <button onclick="loadBook()">Load Book Details</button><br>
 <br><br>
-	
+ 	
+ 	<style>
+ 	textarea {
+ 	height:100px;
+ 	width:200px;
+ 	</style>
+ 	
+ 
+        </div>
+        
+        <footer role="contentinfo">
+            <a href="/index.html">| Home |</a>
+            <a href="homepage.html">| CIT 261 Examples |</a>
+        </footer>
     </body>
 </html>
