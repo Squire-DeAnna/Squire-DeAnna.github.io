@@ -9,6 +9,56 @@ This page will tell people about our company
         <link href="/css/normalize.css" type="text/css" rel="stylesheet" media='screen'/>
         <meta	name="viewport"	content="width=device-width,	
 iniHal-scale=1.0, maximum-scale=1.0">
+	<style>
+ 	textarea {
+ 	height:100px;
+ 	width:200px;
+ 	</style>
+	<script>
+ 	var bookList = new Array()
+ 	function saveBookList(){
+ 		bookList.push(document.getElementById('books').value);
+			
+			localStorage.setItem("list", JSON.stringify(bookList));
+			document.getElementById('books').value='';
+			document.getElementById("showList").innerHTML = "This is your list <br>" + bookList;
+	}
+		
+	function getList(){
+			document.getElementById("showList2").innerHTML = localStorage.list;
+	}
+		
+	function saveBookDetails(){
+ 		var bookDetails = {
+ 		"Name":document.getElementById('bookName').value,
+ 		"Author":document.getElementById('bookAuthor').value,
+ 		"Genre":document.getElementById('bookGenre').value,
+ 		};
+			
+		localStorage.setItem("details", JSON.stringify(bookDetails));
+		var getStory = localStorage.getItem("details");
+					
+		document.getElementById("showBookDetails").innerHTML = getStory;
+					
+	}
+		
+	function saveBook(){
+ 		var bookName = document.getElementById('bookName_input').value;
+ 		var bookInfo = document.getElementById('bookInfo_input').value;
+ 		
+ 		localStorage.setItem(bookName, bookDetails);
+ 	
+ 	}
+ 	
+ 	function loadBook(){
+ 		var bookName = document.getElementById('bookName_input').value;
+ 		var bookInfo = localStorage.getItem(bookName);
+ 		
+ 		document.getElementById("bookInfo_input").value = bookInfo;
+ 	}
+	
+	
+	</script>
     </head>
     <body>
         
@@ -30,31 +80,12 @@ iniHal-scale=1.0, maximum-scale=1.0">
  	<input type= "text" id="books"><br>
  	<button onclick="saveBookList()">Add Item to your Reading List</button><br>
  	<div id="showList"></div><br>
- 	
- 	<script>
- 	
- 		var bookList = new Array()
- 		function saveBookList(){
- 			bookList.push(document.getElementById('books').value);
-			
-					localStorage.setItem("list", JSON.stringify(bookList));
-					document.getElementById('books').value='';
-					document.getElementById("showList").innerHTML = "This is your list <br>" + bookList;
-	}
-	
-	</script>
 	
 	<p>Here you can call up your list by clicking this button<br>
 	
 <button onclick="getList()">Call List</button>
  <div id="showList2"></div><br></p>
-	<script>
-		
-		function getList(){
-			document.getElementById("showList2").innerHTML = localStorage.list;
-	}
-		
- 	</script>
+	
  	<p>
  	Now you may want to put a little more information in about your books. Try adding in a few more details into this associative array.<br>
  	Book Name:<input type= "text" id="bookName"><br>
@@ -64,23 +95,6 @@ iniHal-scale=1.0, maximum-scale=1.0">
  	<div id="showBookDetails"></div><br>
  	</p>
  	
- 	<script>
- 	
- 		function saveBookDetails(){
- 		var bookDetails = {
- 		"Name":document.getElementById('bookName').value,
- 		"Author":document.getElementById('bookAuthor').value,
- 		"Genre":document.getElementById('bookGenre').value,
- 		};
-			
-					localStorage.setItem("details", JSON.stringify(bookDetails));
-					var getStory = localStorage.getItem("details");
-					
-					document.getElementById("showBookDetails").innerHTML = getStory;
-					
-	}
- 	
- 	</script>
  	How about we make this even easier and put the details and a text box that can be associated with the title so you can retrieve it easier.<br>
  	Book Name: <input type= "text" id="bookName_input"><br>
  	<textarea id="bookInfo_input">Author:
@@ -92,32 +106,9 @@ Published:
 <button onclick="loadBook()">Load Book Details</button><br>
 <br><br>
  	
- 	<style>
- 	textarea {
- 	height:100px;
- 	width:200px;
- 	</style>
+
  	
- 	
- 	<script>
- 	function saveBook(){
- 		var bookName = document.getElementById('bookName_input').value;
- 		var bookInfo = document.getElementById('bookInfo_input').value;
- 		
- 		localStorage.setItem(bookName, bookDetails);
- 	
- 	}
- 	
- 	function loadBook(){
- 		var bookName = document.getElementById('bookName_input').value;
- 		var bookInfo = localStorage.getItem(bookName);
- 		
- 		document.getElementById("bookInfo_input").value = bookInfo;
- 	}
- 	
- 	</script>
- 	
- 	
+ 
         
         <footer role="contentinfo">
             <a href="/index.html">| Home |</a>
