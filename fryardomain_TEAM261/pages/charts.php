@@ -6,7 +6,7 @@
         <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/head.php'; ?>         <!--Contains the CSS and Google Fonts links-->
         <script>
             <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/javascript/navigation.js'; ?>                 // Contains navigation bar scripts
-            <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/javascript/***LINK JAVASCRIPT FILE***.js'; ?> // Contains Scripts for this page
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/javascript/charts.js'; ?> // Contains Scripts for this page
         </script>
     </head>
     <body>
@@ -15,10 +15,17 @@
         </header>
         <main>
             <div class="rightContent">
-                <h1>HEADING1</h1>
+                <h1>Fingering Charts</h1>
                 <hr>
-                <p>PARAGRAPH</p>
-                <button type="button" onclick="">REPLACE TEXT</button>
+                <p>Please select an instrument to see the fingering charts</p>
+                <select onclick="main()" id="instrument" style="width:300px; height:75px" multiple>
+                    <option>Flute</option>
+                    <option>Trumpet</option>
+                    <option>Saxophone</option>
+                    <option>Clarinet</option>
+                    <option>Tuba</option>
+                </select>
+                <p id="fingeringCharts"></p>
             </div>
         </main>
         <footer>

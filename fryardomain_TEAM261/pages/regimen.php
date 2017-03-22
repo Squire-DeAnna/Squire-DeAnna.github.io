@@ -6,8 +6,9 @@
         <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/head.php'; ?>         <!--Contains the CSS and Google Fonts links-->
         <script>
             <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/javascript/navigation.js'; ?>                 // Contains navigation bar scripts
-            <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/javascript/***LINK JAVASCRIPT FILE***.js'; ?> // Contains Scripts for this page
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/javascript/regimen.js'; ?> // Contains Scripts for this page
         </script>
+       
     </head>
     <body>
         <header>
@@ -15,10 +16,13 @@
         </header>
         <main>
             <div class="rightContent">
-                <h1>HEADING1</h1>
-                <hr>
-                <p>PARAGRAPH</p>
-                <button type="button" onclick="">REPLACE TEXT</button>
+                <input type="text" id="listInput" placeholder="Input List Item Here"></input><br>
+                <button onclick="add()">Add</button>
+                <button onclick="remove()">Remove</button>
+                <button onclick="reset()">Reset List</button>
+                <ul id="practiceList" class="practiceList">
+                    
+                </ul>
             </div>
         </main>
         <footer>

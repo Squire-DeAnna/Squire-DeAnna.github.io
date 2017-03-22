@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+var registerNameInput = document.getElementById('registerNameInput').value;
+var registerPasswordInput = document.getElementById('registerPasswordInput').value;
+
+function addInfo() {
+    localStorage.setItem('registerNameInput', registerNameInput);
+    localStorage.setItem('registerPasswwordInput', registerPasswordInput);
+    alert('Thank you for registering! You may now sign in.');
+}
+function verifyInfo() {
+
+    var usernameList = localStorage.getItem('registerNameInput');
+    var passwordList = localStorage.getItem('registerPasswordInput');
+
+    var usernameInput = document.getElementById('usernameInput').value;
+    var passwordInput = document.getElementById('passwordInput').value;
+
+
+    if(usernameInput != usernameList && passwordInput != passwordList) {
+        alert('Welcome ' + usernameInput +'!');  
+        document.getElementById('usernameOutput').innerHTML = 'Welcome ' + usernameInput + '!';}
+    else {
+        alert('Please enter the correct username and password.');
+    }
+    
+}
+</script>
+</head>
+<body>
+  <div id="usernameOutput">Welcome</div>
+                <hr>
+                <p>Please Enter your login credentials. </p>
+                <br>Username: 
+                <input type= "text" id='usernameInput'>
+                <br>Password: 
+                <input type= "text" id='passwordInput'>
+                <br><button type="button" onclick="verifyInfo()">Login</button>
+                <p>Haven't registered? Fill out the form below to register your username and password!</p>
+                <br>Please add your Username: 
+                <input type= "text" id='usernameInput'>
+                <br>Please add your Password: 
+                <input type= "text" id='passwordInput'>
+                <button type="button" onclick="addInfo()">Register</button>
+                
+</body>
+</html>
