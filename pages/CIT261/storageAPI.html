@@ -15,7 +15,10 @@ This page will tell people about our company
 					localStorage.setItem("list", JSON.stringify(bookList));
 					document.getElementById('books').value='';
 					document.getElementById("showList").innerHTML = "This is your list <br>" + bookList;
-					document.getElementById("showList2").innerHTML = booklist;
+	}
+		
+function getList(){
+			document.getElementById("showList2").innerHTML = localStorage.getItem("bookList");
 	}		
 	
 	function saveBookDetails(){
@@ -74,7 +77,7 @@ This page will tell people about our company
 	
 	<p>Here you can call up your list by clicking this button<br>
 	
-<button onclick="saveBookList()">Call List</button>
+<button onclick="getList()">Call List</button>
  <div id="showList2"></div><br></p>
 
  	<p>
