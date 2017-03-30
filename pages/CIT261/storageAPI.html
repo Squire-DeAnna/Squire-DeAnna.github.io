@@ -17,10 +17,9 @@ This page will tell people about our company
 					document.getElementById("showList").innerHTML = "This is your list <br>" + bookList;
 	}
 		
-	function getList(){
-			document.getElementById("showList2").innerHTML = localStorage.list;
-	}
-		
+function getList(){
+			document.getElementById("showList2").innerHTML = booklist;
+	}		
 	
 	function saveBookDetails(){
  		var bookDetails = {
@@ -36,16 +35,16 @@ This page will tell people about our company
 					
 	}
 	
+ 	var bookName = document.getElementById('bookName_input').value;
+ 	var bookInfo = document.getElementById('bookInfo_input').value;
+ 	
  	function saveBook(){
- 		var bookName = document.getElementById('bookName_input').value;
- 		var bookInfo = document.getElementById('bookInfo_input').value;
  		
  		localStorage.setItem(bookName, bookDetails);
  	
  	}
  	
  	function loadBook(){
- 		var bookName = document.getElementById('bookName_input').value;
  		var bookInfo = localStorage.getItem(bookName);
  		
  		document.getElementById("bookInfo_input").value = bookInfo;
