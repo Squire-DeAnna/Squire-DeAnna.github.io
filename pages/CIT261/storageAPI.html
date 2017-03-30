@@ -12,7 +12,7 @@ This page will tell people about our company
  		function saveBookList(){
  			bookList.push(document.getElementById('books').value);
 			
-					localStorage.setItem("list", JSON.stringify(bookList));
+					localStorage.setItem("booklist", JSON.stringify(bookList));
 					document.getElementById('books').value='';
 					document.getElementById("showList").innerHTML = "This is your list <br>" + bookList;
 	}
