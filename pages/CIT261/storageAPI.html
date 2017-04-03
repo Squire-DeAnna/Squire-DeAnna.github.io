@@ -18,7 +18,8 @@ This page will tell people about our company
 	}
 		
 function getList(){
-			document.getElementById("showList2").innerHTML = localStorage.booklist;
+			var retreiveList = localStorage.getItem("booklist");
+			document.getElementById("showList2").innerHTML = JSON.parse(retreiveList);
 	}		
 	
 	function saveBookDetails(){
@@ -35,11 +36,13 @@ function getList(){
 					
 	}
 	
+ 	
  	function saveBook(){
  		var bookName = document.getElementById('bookName_input').value;
  		var bookInfo = document.getElementById('bookInfo_input').value;
  		
- 		localStorage.setItem(bookName, bookDetails);
+ 		localStorage.setItem(bookName, bookInfo);
+ 		
  	
  	}
  	
